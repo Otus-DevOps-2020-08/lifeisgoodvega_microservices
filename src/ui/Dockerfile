@@ -1,7 +1,7 @@
-FROM ruby:2.2
-RUN apt-get update -qq && \
-    apt-get install -y --no-install-recommends build-essential && \
-    rm -rf /var/lib/apt/lists/*
+FROM alpine:3.12
+
+RUN apk --no-cache --update add -t packages ruby-full ruby-dev build-base && \
+    gem install bundler:1.17.2
 
 RUN mkdir /app
 WORKDIR /app
