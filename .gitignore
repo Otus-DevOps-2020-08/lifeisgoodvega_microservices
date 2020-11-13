@@ -2,3 +2,4 @@
 variables.json
 terraform.tfvars
 .terraform
+*.tfstate
