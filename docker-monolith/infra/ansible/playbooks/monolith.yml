@@ -1,0 +1,17 @@
+---
+- name: Install reddit monolith
+  hosts: monolith
+  tags: monolith
+  become: true
+  vars:
+    reddit_image: "lifeisgoodvega/otus-reddit:1.0"
+    reddit_port: 9292
+  tasks:
+    - name: Create docker container
+      docker_container:
+        name: "reddit"
+        image: "{{ reddit_image }}"
+        detach: yes
+        published_ports:
+          - "{{ reddit_port }}:9292"
+        state: started

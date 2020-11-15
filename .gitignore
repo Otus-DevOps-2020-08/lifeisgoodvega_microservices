@@ -1,1 +1,6 @@
 .DS_Store
+variables.json
+terraform.tfvars
+.terraform
+*.tfstate
+*.tfstate.backup
