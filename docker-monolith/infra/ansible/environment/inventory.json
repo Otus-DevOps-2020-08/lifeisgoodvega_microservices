@@ -1,0 +1,9 @@
+{
+    "monolith": {
+        "hosts": ${monolith_hosts}
+    },
+    "_meta": {
+        "hostvars": {
+        }
+    }
+}
